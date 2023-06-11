@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
 import './App.css';
+
+const container = {
+  width: "75%",
+  height: "500px"
+};
+
+const position = {
+  lat: 35.680959106959,
+  lng: 139.76730676352
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>React & Google Map</h2>
+      <div className='wrap'>
+        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API_KEY}>
+          <GoogleMap mapContainerStyle={container} center={position} zoom={15}>
+            <MarkerF position={position} label={"東京駅です！"} />
+          </GoogleMap>
+        </LoadScript>
+      </div>
+    </>
   );
 }
 
