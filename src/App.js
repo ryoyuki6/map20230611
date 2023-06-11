@@ -18,7 +18,7 @@ function App() {
       <div className='wrap'>
         <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API_KEY}>
           <GoogleMap mapContainerStyle={container} center={position} zoom={15}>
-            <MarkerF position={position} label={"東京駅です！"} />
+            <MarkerF position={position} label={"東京駅です"} />
           </GoogleMap>
         </LoadScript>
       </div>
