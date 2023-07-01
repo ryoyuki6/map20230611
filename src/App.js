@@ -20,7 +20,7 @@ const positionTokyoStation = {
 function App() {
   return (
     <>
-      {/* <h2>React & Google Map</h2> */}
+      {/* <h2>React & Google Map !</h2> */}
       <div className='wrap'>
         <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API_KEY}>
           <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
